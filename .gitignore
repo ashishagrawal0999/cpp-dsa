@@ -1,0 +1,30 @@
+# Compiled files
+*.out
+*.exe
+*.o
+*.obj
+
+# Build
+build/
+bin/
+
+# macOS
+.DS_Store
+
+
+# CLion
+.idea/
+cmake-build-*/
+
+# CMake
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# Debug
+*.dSYM/
+
+# Temporary
+*.tmp
+*.temp
