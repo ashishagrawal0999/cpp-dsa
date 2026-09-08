@@ -8,7 +8,7 @@ using namespace std;
 
 int main(){
 
-    // normal pair -> a group of two values 
+    // normal pair -> a group of two values
 
     pair<int,int> p1 = {1,2};
     cout<<p1.first<<" "<<p1.second<<" ";
@@ -28,18 +28,17 @@ int main(){
 
 
     //  vector of int -> just like we created vector of integers
-    //  vector<int> vec = {1,2,3,4,5,6};  
-    
+    //  vector<int> vec = {1,2,3,4,5,6};
 
-    // vector of pair 
 
+    // vector of pair
     vector<pair<int,int>> vp = {{1,2}, {2,3}, {3,4}, {4,5}};
 
     // vp.push_back({1,2});
     // vp.push_back({2,3});
 
 
-    // har pair ko access krne ke liye hume use conatiner me stroe krna hoga aur phir hum use print krskte hai 
+    // har pair ko access krne ke liye hume use container me store krna hoga aur phir hum use print krskte hai
     // pair ko hum ek type ki tarah leskte hai jaise int ek type hai , vaise he pair ek type hai
 
     // Pair container nahi hai:
@@ -48,8 +47,7 @@ int main(){
     // ❌ size()
     // ❌ push_back()
 
-    //         Lekin,
-    //         VECTOR<PAIR>
+    // Lekin vector<pair>
     // │
     // ├── begin / end
     // ├── iterator
@@ -57,7 +55,7 @@ int main(){
     // ├── emplace_back
     // └── loops
 
-    // Ekdum final distinction 🔥
+    // Distinction
 
     // pair<int,int> p
     //      ↓
@@ -67,7 +65,6 @@ int main(){
     // ❌ no iterator
 
     //  Lekin:
-
     //  vector<pair<int,int>> vp
     //        ↓
     //      vector
@@ -79,7 +76,6 @@ int main(){
 
     // isiliye vector iterator -> pair ko point krega , aur pair->first , pair-> second krke value access krskte hai
     // yehi cheez hum map me bhi krrhe the , map ka iterator entry ko point krrha tha aur voh entry ek pair he thi
-
 
 
     vector<pair<int, int>>::iterator it = vp.begin();
@@ -131,7 +127,7 @@ int main(){
     // Pehle first compare hota hai , phir second
     cout<< (p5 != p6) << " ";
 
-  
+
 
     // pushing a pair in vector -> isme iterator me push krna hai yaa pair me , mtlb pair ke name me
     vp.push_back({1, 2});
@@ -140,7 +136,6 @@ int main(){
 
     vp.emplace_back(4,5);
     // in-place objects create , it can convert value into pair , no parenthisis is required
-
 
     return 0;
 }
