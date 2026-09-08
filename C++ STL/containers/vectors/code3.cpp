@@ -4,35 +4,34 @@ using namespace std;
 
 int main(){
 
-
-    vector<int> vec1 ={1,2,3,4,5,6};
-
-    vec1.clear();
-
-    cout<<"is empty :"<<vec1.empty()<<endl;
-
-    vector<int> vec2 ={1,2,3,4,5,6};
-    cout<<"begin is "<<*(vec2.begin())<<endl;
+    vector<int> vec ={1,2,3,4,5,6};
+    cout<<"begin is "<< *(vec.begin()) <<endl;
 
 
-    vector<int> :: iterator it = vec2.begin();
+    vector<int> :: iterator it = vec.begin();
+    for(it = vec.begin(); it!= vec.end(); ++it){
+        cout<< *(it) <<" ";
+    }
+    cout<<endl;
 
-    // for(it = vect2.begin(); it!= vect2.end();it++){
-    //     cout<< *(it) <<" ";
-    // }
 
-    // for(auto it = vect2.rbegin(); it != vect2.rend(); it++){
-    //     cout<<*(it)<<endl;
-    // }
+    for(auto it = vec.rbegin(); it != vec.rend(); ++it){
+        cout<< *(it) <<" ";
+    }
+    cout<<endl;
 
-    // for (auto it = vect.begin(); it != vect.end(); it++)
-    // {
-    //     cout << *(it) << " ";
-    // }
 
-    while(it != vec2.end()){
-        cout<<*(it)<<" ";
-        it++;
+    for (auto it = vec.begin(); it != vec.end(); ++it){
+        cout << *(it) <<" ";
+    }
+    cout<<endl;
+
+    // agar same iterator ko multiple jagah use krna hai toh iterator ke value reset krni hogi yaa toh dusra iterator banana hoga
+    
+    vector<int> :: iterator it2 = vec.begin();
+    while(it2 != vec.end()){
+        cout<< *(it2) <<" ";
+        ++it2;
     }
 
     return 0;
