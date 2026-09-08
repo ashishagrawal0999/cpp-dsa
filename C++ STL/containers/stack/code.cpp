@@ -16,7 +16,7 @@ int main(){
 
     // Implemented using other containers (e.g., vector , deque , list) as the underlying storage
 
-    // creation
+    // creation :
 
     stack<int> st;
 
@@ -33,13 +33,11 @@ int main(){
 
 
 
-
     if(st.empty() == true){
         cout<<"Stack is empty";
     } else {
         cout<<"Stack is not empty";
     }
-
 
 
     stack<int> st2;
@@ -49,21 +47,16 @@ int main(){
 
     st.swap(st2);
 
-    // Iterate nhi krskte isiliye because stack me iterator jaisa kuchh hai nhi isiliye ,
+    // Iterate nhi krskte because stack me iterator jaisa kuchh hai nhi
     // st.top print krke , element pop krna hoga , aur har element print krenge jab tk stack empty nhi hojaata
-
-    // queue me bhi iterator nhi hai , front print krke , front se pop krskte hai
-
-
 
     while(st.empty() == false){  // !st.empty()
         cout<<st.top()<<" ";
         st.pop();
     }
-
     cout<<endl;
-    return 0;
 
+    return 0;
 }
 
 
