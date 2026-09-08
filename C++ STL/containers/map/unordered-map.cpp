@@ -7,7 +7,6 @@ int main(){
 
 // header file -> #include <unordered_map>
 
-
 // creation Of unordered map
 unordered_map<int,string> um;
 
@@ -51,13 +50,13 @@ if(um.empty() == true){
 }
 
 
-// Iterators: 
+// Iterators:
 // 1.) begin , end : normal iterators
 // 2.) cbegin , cend : const iterators , isme value update nhi krskte
 
 // find() -> particular key ko map me search krta hai aur iterator deta hai uss particular entry ki
 // ex.)  um.find(3) , key 3 ko map search kro
-// um.find(3) , yeh key 3 ka iterator dedega 
+// um.find(3) , yeh key 3 ka iterator dedega
 // Yahan find(3) poore map mein internally search karta hai , khud while loop yaa for-each loop likhne ki zaroorat nahi.
 // find() khud searching ka kaam karta hai.
 
@@ -65,7 +64,7 @@ if(um.empty() == true){
 
 //              ________________
 //       it ->  | 3 → "Banana" |
-//              |______________|             
+//              |______________|
 
 // it key 3 wali poori entry(pair) ko point kar raha hai.
 // cout<<it->first<< " "<<it->second<<" ";
@@ -99,7 +98,7 @@ while (it2 != um.end()){
  }
 
  // Complete map traversal using "range-based for"
- // "range-based for" me "entry" sirf ek variable hai jisme voh particular pair hai (key : value) ki 
+ // "range-based for" me "entry" sirf ek variable hai jisme voh particular pair hai (key : value) ki
  // yaha entry pair he hai isiliye entry.first aur entry.second likh rhe
  for (auto entry : um){
      cout<<entry.first<<" "<<entry.second<<" ";
@@ -108,7 +107,7 @@ while (it2 != um.end()){
 
 
  // Complete map traversal using "iterator-based for"
-     for (auto it = um.begin(); it != um.end(); ++it){ 
+     for (auto it = um.begin(); it != um.end(); ++it){
          cout << it->first << " " << it->second << " ";
  }
 
@@ -128,8 +127,6 @@ if(um.count(1) == 0){
 } else {
     cout<<"Key found";
 }
-
-
 
 
 um.erase(2); // entry whose "key" is 2 is deleted
@@ -156,7 +153,6 @@ um.erase(2); // entry whose "key" is 2 is deleted
  // }
 
  cout << um.size() << " ";
-
  um.clear(); // saari entries delete
 
  return 0;

@@ -7,7 +7,7 @@ int main(){
     // Map -> collection of entries aur entries are key -> value pairs
     // har ek entry (key -> value) form me store hoti hai
 
-    // header file -> #include<map> 
+    // header file -> #include<map>
     // har ek key ek value ko store kregi
     // Ek Table Hai Jisme data store hai
 
@@ -22,7 +22,7 @@ int main(){
     // 2.) agar iterator yaa pointer use krrhe hote toh :
     // mapName->first aur mapName->second krke krna hota
 
-    
+
 
     // key -> value
     // key -> int type , value -> string type
@@ -55,12 +55,13 @@ int main(){
     // allows efficient retrieval and modification of values based on keys
     // keys are unique within the map -> keys should be unique
 
-  
 
+    // creation :
     map<string,string> table;
 
-    // insertion
+    // insertion :
     table["in"] = "India";
+    table["au"] = "Australia";
 
     // table.insert(make_pair("en","England"));
 
@@ -71,25 +72,27 @@ int main(){
 
 
     // "in" key me jo value hai voh print hojaayegi
-    cout << table.at("in") << endl; 
-    cout << table["in"] << endl;
+    cout << table.at("in") << endl;     // india
+    cout << table["in"] << endl;        // india
+
 
     // updating values
-    table.at("in") = "india2";
-    table["in"] = "india3";
-    cout << table.at("in") << endl;
+    // update -> [] aur .at se update krskte hai
 
-    table["au"] = "Australia";      // creating more entries
-    table["nz"] = "New Zealand";
+    table["in"] = "india2";
+    table.at("in") = "india3";
+    cout << table.at("in") << endl;     // india3
+
+
+    table["nz"] = "New Zealand"; // creating more entries
     table["us"] = "USA";
 
-    // Iterators -> begin, end, rbegin, rend,  cbegin, cend 
-    // unordered_map me rbegin aur rend nhi hote 
 
+    // Iterators -> begin, end, rbegin, rend,  cbegin, cend
+    // unordered_map me rbegin aur rend nhi hote
 
 
     map<string,string>::iterator it = table.begin();
-
     while(it != table.end()){
         cout<<(it->first)<<" "<<(it->second)<<endl;     // it->first ka equivalent hai (*it).first mtlb it se humne poori entry access krli  , phir uske first value ko print krdiye aur usi tarah se second value print krdiye
         it++;
@@ -109,7 +112,6 @@ int main(){
     // cout << table.size() << endl;
     // table.clear();
     // cout << table.size() << endl;
-
 
     return 0;
 
