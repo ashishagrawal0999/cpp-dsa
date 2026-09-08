@@ -9,17 +9,16 @@ int main(){
 
     // prioity queue --> maximum element at the top
     // header file -> #include<queue>
-    // itertor nhi hai 
-    
-    
-    // creation 
+    // itertor nhi hai
 
+
+    // creation :
     priority_queue<int> pq;
 
     // max-heap -> maximum value -> highest priority
     // push -> add highest priority element in front -> heapify operation -> T.C. -> O(logn)
-    // pop -> remove highest priority element from pq and make the next next highest priority element as priority element 
-    
+    // pop -> remove highest priority element from pq and make the next next highest priority element as priority element
+
     // pop() , top() -> T.C. -> O(1)
 
     pq.push(20);
