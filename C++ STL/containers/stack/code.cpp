@@ -17,7 +17,6 @@ int main(){
     // Implemented using other containers (e.g., vector , deque , list) as the underlying storage
 
     // creation :
-
     stack<int> st;
 
     st.push(10);    // 10
@@ -25,12 +24,10 @@ int main(){
     st.push(30);    // 10 20 30
 
     cout<<st.size()<<" ";
-
     st.pop();
     cout<<st.size()<<" ";
 
     cout<<st.top()<<" "; // returns the value which is present at the top of stack
-
 
 
     if(st.empty() == true){
