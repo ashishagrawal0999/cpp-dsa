@@ -11,7 +11,9 @@ int main(){
     // Ordered Set : Internally implemented as self balancing BST
     // T.C. -> O(logn) for all operations
 
-    // Creation:
+    // set generally Bidirectional Iterator provide karta hai
+
+    // creation:
 
     set<int> s1;
     s1.insert(1);
@@ -19,78 +21,54 @@ int main(){
     s1.insert(3);
     s1.insert(4);
 
-    // traverse 
-
-    //1.) iterator
+    // traverse :
 
     set<int>::iterator it = s1.begin();
     while(it != s1.end()){
-        cout<<*(it)<<endl;
+        cout<<*(it)<<" ";
         ++it;
     }
+    cout<<endl;
 
     // 2.) Range based for
-
     for(auto &val : s1){
         cout<<val<<" ";
     }
+    cout<<endl;
 
-
-    s1.erase(s1.begin() , s1.begin()+2);
-    s1.erase(s1.begin() , s1.end());
-
-    cout << s1.size() << endl;
-    s1.clear();
-    cout << s1.size() << endl;
 
     if (s1.empty() == true){
-        cout << "Set is empty";
+        cout << "Set is empty"<<endl;
     } else {
-        cout << "Set is not empty";
+        cout << "Set is not empty"<<endl;
     }
 
 
-    if(s1.find(1) != s1.end()){
-        cout<<"Element is found";
+    // find() returns an iterator
+    // find krke , element print krskte hai
+    // but set me index se element access nhi krskte
+
+    auto it2 = s1.find(3);
+    if(it2 != s1.end()){
+        cout<<"Element is found ";
+        cout<< *it2 << endl;
     } else {
-        cout<<"Element not found";
+        cout<<"Element not found"<<endl;
     }
 
 
     if(s1.count(2) == 1){
-        cout<<"2 is found";
+        cout<<"2 is found"<<endl;
     } else {
-        cout<<"2 is not found";
+        cout<<"2 is not found"<<endl;
     }
-
-
-
-
-
-
-
-
-
-
-
-    // Unordered Set : implemented internally as hashtable , array like structure ko use krrha hota hai
-    // T.C. -> O(1) for all operations
-    // Creation
-
-    // unordered_set<int> s1;
-    // unordered_set<int>::iterator it = s1.begin();
-    // while (it != s1.end()){
-    //     cout << *(it) << endl;
-    //     ++it;
-    // }
-
-
-    // // lowerbound
-    // cout<<*(s.lower_bound(4))<<" is lowerbound"<<endl;
     
-    // for( auto val : s){
-    //     cout<<val<<" ";
-    // }
+
+    s1.erase(s1.begin(), s1.end());
+
+    cout << s1.size() << endl;
+    s1.clear();
+    cout << s1.size() << endl;
 
     return 0;
 }
