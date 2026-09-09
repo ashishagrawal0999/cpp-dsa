@@ -39,8 +39,7 @@ int main(){
     list1.erase(list1.begin() , list1.end());
     cout<<list1.size();
 
-
-
+    
     return 0;
 
 }

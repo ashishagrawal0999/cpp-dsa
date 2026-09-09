@@ -9,15 +9,33 @@ int main(){
 
     // header file -> #include<list>
     // Allows fast insertion and removals anywhere in the list
+    // Non-contiguous memory
 
+    // List container is based on doubly linked list
     // Doubly Linked list -> has pointer to previous node , data , and has pointer to next node
 
     // | prev | data | next |->| prev | data | next |->| prev | data | next |
     // head ^                                                          ^null
 
-    // In vectors -> to access any data takes O(1) time
-    // No random access like vectors -> takes O(n) time to access any data
 
+    // No random access
+    // Iterator → Bidirectional
+
+    // forward_list mein iterator ko-- nahi kar sakte,
+    // jabki list mein kar sakte ho.
+
+    // Time Complexity:
+
+    // push_back() , push_front()    -> O(1)
+    // pop_back() , pop_front()      -> O(1)
+    // front() , back()              -> O(1)
+    // size()                        -> O(1)
+    // insert()                      -> O(1) if iterator to position is available
+    // erase()                       -> O(1) if iterator to position is available
+    // remove()                      -> O(n)
+    // clear()                       -> O(n)
+    // Access by position            -> O(n)
+    // Random access                 -> Not supported
 
     // creation :
     list<int> myList;
@@ -28,7 +46,7 @@ int main(){
     // 10->20
     myList.push_back(30);
     // 10->20->30
-    
+
     myList.push_front(40);
     // 40->10->20->30
     myList.push_front(50);
