@@ -17,7 +17,9 @@ int main(){
     cout<<p2.first<<" "<<p2.second<<" ";
 
 
+    // auto p = make_pair(10,"Hello");      // arguments ka type khud deduce krlega
 
+    
     // pair of pair
 
     pair<int,pair<int,int>> p3 = {1,{1,2}};
