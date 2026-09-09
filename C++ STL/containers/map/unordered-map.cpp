@@ -1,13 +1,16 @@
 #include<iostream>
 #include<map>
 #include<unordered_map>
-
 using namespace std;
+
 int main(){
 
-// header file -> #include <unordered_map>
+// header file ->  #include<unordered_map>
+// unordered_map me sequence follow nhi hota
+// unordered_map me rbegin aur rend nhi hote
+// Baaki sabhi cheez map (ordered map) aur unordered_map me same hai
 
-// creation Of unordered map
+// creation Of unordered map :
 unordered_map<int,string> um;
 
 
@@ -19,26 +22,26 @@ um[1] = "Apple";
 um[2] = "Mango";
 um[3] = "Banana";
 um[4] = "Orange";
-um[5] = "Grapes";
+
 
 
 // update -> [] aur .at se update krskte hai
-um[5] = "Papaya";
-um.at(5) = "Pomogranate";
+um[4] = "Papaya";
+// um.at(4) = "Pomogranate";
 
 
-// Accessing Values
-cout<<"Entry at key 2 is : "<<um[2]<<" "<<um.at(2)<<" "<<endl;
+// Accessing Values :
+// key me jo value hai voh print hojaayegi
+cout<<"Entry at key 5 is : "<<um[4]<<" "<<um.at(4)<<endl;
+cout<<"Entry at key 2 is : "<<um[2]<<" "<<um.at(2)<<endl;
 
 
-// Updating values
-um[7];                  // [] -> square bracket , 7 naam ki key nhi hai toh yeh new entry create krdega 7 name ki
-// um.at(7);            // par yeh exception throw krdega
+um[5] = "Grapes";        // creating more entries
 
 
-cout<<um.count(4)<<" ";
 // map/unordered_map mein keys unique hoti hain, isliye result:
-// 0 mtlb key nahi hai  , 1 mtlb key hai
+// 0 mtlb key nahi hai, 1 mtlb key hai
+cout<<um.count(4)<<" ";
 
 
 cout<<um.size()<<" ";
@@ -50,7 +53,7 @@ if(um.empty() == true){
 }
 
 
-// Iterators:
+// Iterators: Bi-directional
 // 1.) begin , end : normal iterators
 // 2.) cbegin , cend : const iterators , isme value update nhi krskte
 
@@ -73,7 +76,7 @@ if(um.empty() == true){
 
 
 
-// Specific key search
+// Specific key search :
 // 1.) find() : key present hai yaa nhi aur hai toh voh entry bhi dedeta hai
 unordered_map<int, string>::iterator it = um.find(3);       // auto it = um.find(3);
 
@@ -83,8 +86,6 @@ if(it != um.end()){
 } else {
     cout<<"Key is not found";
 }
-
-// 2.) contains() : sirf btata hai key present hai yaa nhi
 
 
 
@@ -97,6 +98,7 @@ while (it2 != um.end()){
     it2++;
  }
 
+
  // Complete map traversal using "range-based for"
  // "range-based for" me "entry" sirf ek variable hai jisme voh particular pair hai (key : value) ki
  // yaha entry pair he hai isiliye entry.first aur entry.second likh rhe
@@ -104,8 +106,7 @@ while (it2 != um.end()){
      cout<<entry.first<<" "<<entry.second<<" ";
  }
 
-
-
+ 
  // Complete map traversal using "iterator-based for"
      for (auto it = um.begin(); it != um.end(); ++it){
          cout << it->first << " " << it->second << " ";
