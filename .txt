@@ -1,0 +1,116 @@
+
+// Sab Ke Liye T.C. pADHNI hAI
+// map me emplace kaise use kre aur baaki stl classes me bhi
+
+Amortized : Har individual operation ka cost same nahi hota,
+            lekin bahut saari operations ko ek saath average karo toh per operation cost ek certain limit ke andar rehta hai.
+
+
+
+
+                // 42 32 12 22 yaha phir galat output kyo aarha
+                // 12 ke baad 22
+                // list me bhi check krna hai
+
+
+                // Important:
+                // end() does NOT point to the last element.
+                // To access the last element:
+                // auto it = l1.end();
+                // --it;
+
+                // Map aUR pAIR Ke Operaton , Iterator Ki T.C.
+                // pRIORITY qUEUEaur queue ke OPEARTION kI t.c.
+                // set , multiset me konsa iterator hai
+
+                // Unordered Set : implemented internally as hashtable , array like structure ko use krrha hota hai
+                // T.C. -> O(1) for all operations
+                // Creation
+
+                // unordered_set<int> s1;
+                // unordered_set<int>::iterator it = s1.begin();
+                // while (it != s1.end()){
+                //     cout << *(it) << endl;
+                //     ++it;
+                // }
+
+                // // lowerbound
+                // cout<<*(s.lower_bound(4))<<" is lowerbound"<<endl;
+
+                // for( auto val : s){
+                //     cout<<val<<" ";
+                // }
+
+                // 9. lower_bound() / upper_bound() ⭐
+
+                //     Ye important hain,
+                //     but map ke liye.
+
+                //     10. equal_range()
+
+                //         map mein :
+
+                //     swap()
+//         extract()
+//             merge(),
+
+                Ordered -
+                map special
+
+    ├── lower_bound()
+
+    ├── upper_bound()
+
+    └── equal_range()
+
+                    Advanced
+
+    ├── swap()
+
+    ├── extract()
+
+    └── merge()
+
+                // set me
+
+                15. lower_bound() ⭐
+
+                16. upper_bound() ⭐
+
+                17. equal_range()
+
+                    emplace constructor arguments ko directly use karke container ke element ko construct karne ka opportunity deta hai.Isi wajah se complex objects ke case mein iska advantage zyada meaningful hota hai.
+
+                unordered_map
+→ hash - based
+→ no sorted order
+→ find / contains
+→ lower_bound / upper_bound ❌
+
+                    map
+→ ordered
+→ key sorted
+→ find / contains
+→ lower_bound / upper_bound
+                    / equal_range ✅ Ab tumhare map / unordered_map ke basic
+                - to - intermediate functions ka set practically complete hai.extract() / merge() ko abhi ratne ki zaroorat nahi—DSA ke liye find,
+            count,
+            contains,
+            erase,
+            iterators aur map ke lower_bound / upper_bound zyada important hain.
+
+                                               // comparator , in pair
+
+                                               // map ur unordered map dono me aise krskte hai
+                                               // table.insert(make_pair("en","England"));
+
+                                               // pair<string,string> p;
+                                               // p.first = "br";
+                                               // p.second = "brazil";
+                                               // table.insert(p);
+
+                                               // Updating values : in unordered map
+                                               um[6]; // [] -> square bracket , 6 naam ki key nhi hai toh yeh new entry create krdega 6 name ki
+// um.at(6);            // par yeh exception throw krdega
+
+// ordered map me .at() se krskte hai
