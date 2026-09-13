@@ -81,36 +81,41 @@ Amortized : Har individual operation ka cost same nahi hota,
 
                     emplace constructor arguments ko directly use karke container ke element ko construct karne ka opportunity deta hai.Isi wajah se complex objects ke case mein iska advantage zyada meaningful hota hai.
 
-                unordered_map
+unordered_map
 → hash - based
 → no sorted order
 → find / contains
 → lower_bound / upper_bound ❌
 
-                    map
+map
 → ordered
 → key sorted
 → find / contains
 → lower_bound / upper_bound
-                    / equal_range ✅ Ab tumhare map / unordered_map ke basic
-                - to - intermediate functions ka set practically complete hai.extract() / merge() ko abhi ratne ki zaroorat nahi—DSA ke liye find,
-            count,
-            contains,
-            erase,
-            iterators aur map ke lower_bound / upper_bound zyada important hain.
 
-                                               // comparator , in pair
+/ equal_range ✅ Ab tumhare map / unordered_map ke basic
+- to - intermediate functions ka set practically complete hai.extract() / merge() ko abhi ratne ki zaroorat nahi—DSA ke liye find, count, contains, erase,
 
-                                               // map ur unordered map dono me aise krskte hai
-                                               // table.insert(make_pair("en","England"));
+iterators aur map ke lower_bound / upper_bound zyada important hain.
 
-                                               // pair<string,string> p;
-                                               // p.first = "br";
-                                               // p.second = "brazil";
-                                               // table.insert(p);
+// comparator , in pair
 
-                                               // Updating values : in unordered map
-                                               um[6]; // [] -> square bracket , 6 naam ki key nhi hai toh yeh new entry create krdega 6 name ki
+
+
+// map ur unordered map dono me aise krskte hai
+// table.insert(make_pair("en","England"));
+
+// pair<string,string> p;
+// p.first = "br";
+// p.second = "brazil";
+// table.insert(p);
+
+
+
+// Updating values : in unordered map
+um[6]; // [] -> square bracket , 6 naam ki key nhi hai toh yecreate krdega 6 name ki
 // um.at(6);            // par yeh exception throw krdega
+
+
 
 // ordered map me .at() se krskte hai
