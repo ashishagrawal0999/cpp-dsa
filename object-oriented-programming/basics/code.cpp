@@ -2,19 +2,20 @@
 using namespace std;
 
 // OOPS -> to overcome the issues and limitations faced in functional programming
-// class -> properties and behaviours
-// attributes are properties or state
-// behaviour is defined through methods (function)
+// class is a blueprint which has:
+// 1.) properties
+// 2.) behaviour : defined through methods (function)
+
 // Student is a user defined data type -> Isme multiple datatype ke data hosktte hai
 
 class Student {
     public:
-        // Data members / properties
+        //  properties
         string name;
         int age;
         float cgpa;
 
-        // Member function / method
+        //  method / member function
         void getPercentage(){
             cout<< (cgpa * 10) << "%" <<endl;
         }

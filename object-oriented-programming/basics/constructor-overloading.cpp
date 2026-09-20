@@ -56,7 +56,9 @@ public:
 };
 
 
-// Passing objects to functions:
+// Passing objects to functions: 
+// normal functions, not the part of class
+
 // 1.) better way to print:
 void print(Car c){
     cout << c.name << " " << c.price << " " << c.seats << " " << " " << c.type << endl;
