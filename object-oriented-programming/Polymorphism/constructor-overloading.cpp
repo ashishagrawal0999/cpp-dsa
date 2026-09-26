@@ -2,6 +2,12 @@
 #include <string>
 using namespace std;
 
+// Polymorphism : many forms
+// abity of a function or operator to work in different ways
+// types: compile time polymorphism , run time polymorphism
+
+// RunTime Polymorphism : Constructor Overloading
+
 class Car{
 public:
     string name;
@@ -52,7 +58,6 @@ public:
     // }
     // this tab use krenge jab parameter aur property same naam se likhe ho
 
-
 };
 
 
@@ -99,11 +104,6 @@ int main(){
     Car c4("Mercedes", "Sedan", 7500000, 5);
 
     print(c4);
-
-    // Copy Constructor :
-    Car c5(c4);
-    
-    print(c5);
 
     return 0;
 }
