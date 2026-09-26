@@ -1,32 +1,61 @@
 #include<iostream>
 using namespace std;
 
-// Inheritance -> a class inheriting properties from its parent class , also it has some properties of its own 
+// Inheritance -> a class inheriting properties from its parent class , also it has some properties of its own
+// mode of inheritance : public, private, protected
 
-class Scooty {           // parent class
- public:
-    int topSpeed;
-    float mileage;
+// derived class  : modeofinheritance  base class{
+//}
 
-private:
-    int bootSpace;
 
+class Animal{                   // parent class
+public:
+    string color;
+
+    void eat(){
+        cout<<"eats"<<endl;
+    }
+
+    void breathe(){
+        cout<<"breathe"<<endl;
+    }
 };
 
 
-// : public Scooty 
-// inheriting the public properties of class Scooty , not private properties
-class Bike : public Scooty{     // child class
- public:
-    int gears;
-};
+// mode of inheritance : public, private, protected
 
+// derived class  : modeofinheritance  base class{
+//}
+
+// : public Fish
+// inheriting the public properties of class Animal
+
+class Fish : public Animal{
+public:
+    int fins;
+
+    void swim(){
+        cout<<"swim"<<endl;
+    }
+};
 
 
 int main(){
-    Bike b1;
-    b1.gears = 6;
-    b1.topSpeed = 180;
-    // b1.bootSpace = 9;  // gives error
+    Animal A;
+    A.breathe();
+    A.eat();
+    cout<<A.color<<endl;
 
+    Fish F;
+    F.breathe();
+    F.eat();
+    F.swim();
+
+    return 0;
 }
+
+
+
+
+
+
