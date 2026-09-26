@@ -2,10 +2,15 @@
 #include<string>
 using namespace std;
 
+// Polymorphism : many forms
+// abity of a function or operator to work in different ways
+// types: compile time polymorphism , run time polymorphism
+
 class Loading{
 public:
 
-// Function Overloading -> compile time me decide hoga ki konsa function call hoga
+// Function Overloading -> Compile Time Polymorphism
+// compile time me decide hoga ki konsa function call hoga
 
 // same function with same return type with different number of parameters and different type of paramteres
 
