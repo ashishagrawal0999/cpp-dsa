@@ -53,6 +53,29 @@ public:
     // this tab use krenge jab parameter aur property same naam se likhe ho
 
 
+    // // Custom copy constructor       -> ise samajhna hai , apna college
+    // Car(Car &original){
+    //     cout<<"copying original to new..\n";
+    //     name = original.name;
+    //     seats = original.seats;
+    // }
+
+
+    // jaise he hum main function se baahar jaayenge objects automatically clear hojaayegi
+
+    // destructor is automatically invoked just like 
+
+    // dynamic memory allocation ke case me we have to make a destructor in order to free the memory because run time me memory jo allocate hui hai voh khud se free nhi hogi
+
+    // array ke form me , pointer ke form me memory allocation me hume destructor ka use krna hoga 
+
+    // ~Car(){ }
+
+    ~Car(){
+        cout<<"object deletion.."<<endl;
+    }
+    
+
 };
 
 
