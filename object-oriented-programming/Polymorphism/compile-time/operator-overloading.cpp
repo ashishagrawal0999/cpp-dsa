@@ -1,7 +1,6 @@
 #include<iostream>
 using namespace std;
 
-// Operator Overloading -> Compile Time Polymorphism
 // same operator , but redefine krke use krna
 
 // returnType operator opSymbol(){
@@ -27,7 +26,7 @@ public:
     void fraction(){
         int newNum = this->numerator*f.denominator + f.numerator*this->denominator;
 
-        int newDen = this->denominator*f.denominator  
+        int newDen = this->denominator*f.denominator
     }
 };
 

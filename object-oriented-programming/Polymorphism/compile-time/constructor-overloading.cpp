@@ -6,7 +6,6 @@ using namespace std;
 // abity of a function or operator to work in different ways
 // types: compile time polymorphism , run time polymorphism
 
-// RunTime Polymorphism : Constructor Overloading
 
 class Car{
 public:
@@ -82,7 +81,7 @@ int main(){
 
     // Constructor -> Better way to initialize
     Car c1("Maruti 800", 500000, 5, "Hatchback");
-    
+
 
     // override krrhe , constructor me pass arguments ko
     // constructor me Hatchback pass hua -> type hatchback hogaya
