@@ -15,6 +15,8 @@ using namespace std;
 
 // when we make a data member private and use getter setter to access and set its value that is also abstraction
 
+// using access specifiers : public, protected, private
+
 int main(){
     vector<int> vec = {4,5,6,7,2,3,4,8,9};
     sort(vec.begin() , vec.end());
